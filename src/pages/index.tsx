@@ -41,16 +41,12 @@ const Uvod = () => {
           alt="mainImg"
         />
         <div className="Description">
-          <h1>Vítejte na stránkách ZUŠ Heřmanův Městec</h1>
+          <h1>Hostinec U Hušků</h1>
           <p>
-            Naše škola je zřízená jako příspěvková organizace městem Heřmanův
-            Městec. Je zařazena do školského rejstříku.
+            Tradiční hospoda v Bělči nad Orlicí s výborným pivem a skvělou
+            kuchyní.
           </p>
-          <p>
-            Své umělecké vzdělání poskytuje dětem v Heřmanově Městci a na
-            dalších čtyřech pobočkách: v Prachovicích, Třemošnici, Ronově nad
-            Doubravou a Seči.
-          </p>
+
         </div>
       </div>
 
@@ -62,10 +58,15 @@ const Uvod = () => {
               alt="Hudba"
               className="img"
             />
-            <h2>Hudební obor</h2>
+            <h2>Náš Pivovar</h2>
             <p>
-              Žáci v hudebním oboru poznávají hudbu mnoha žánrů. Samotný obor
-              nabízí zaměření i na zpěv.
+              Naší specialitou je výroba tradičního piva. Chutě generace chování hostince se odráží v každém skleničce našeho pěnivého moku.
+            </p>
+            <p>
+              Používáme pouze ty nejkvalitnější suroviny a tradiční postupy vaření, aby mělo pivo ten pravý charakter.
+            </p>
+            <p>
+              Přijďte si jej vychutnat přímo u nás, nebo si objednejte přesně podle vašich představ.
             </p>
           </Link>
         </div>
@@ -77,10 +78,12 @@ const Uvod = () => {
               alt="Dance"
               className="img"
             />
-            <h2>Taneční Obor</h2>
+            <h2>O Nás</h2>
             <p>
-              Žácí ve výtvarném oboru nachází svůj motivační podnět k uměleckému
-              vztahu ke světu a k sebe sama v něm.
+              Velice si vážíme návštěvníků našeho hostince i odběratelů a konzumentů našeho pěnivého moku, včetně těch budoucích.
+            </p>
+            <p>
+              Našich webových stránek chceme využívat ke komunikaci s Vámi. Rádi bychom Vás informovali o všem, co se děje v našem hostinci i pivovaru, o všech novinkách i o tom, co pro Vás připravujeme.
             </p>
           </Link>
         </div>
@@ -92,10 +95,9 @@ const Uvod = () => {
               alt="Art"
               className="img"
             />
-            <h2>Výtvarný Obor</h2>
+            <h2>Komunikujeme S Vámi</h2>
             <p>
-              Žáci v tanečním oboru rozvíjí své prostorové, hudební a taneční
-              cítění.
+              Zároveň budeme rádi, když bude komunikace obousměrná, takže využijte našich kontaktů pro rychlou odpověď na váš dotaz.
             </p>
           </Link>
         </div>

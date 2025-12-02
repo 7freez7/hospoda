@@ -37,7 +37,7 @@ function Footer() {
         <div className="footer-left">
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.4744235611806!2d15.66788637625593!3d49.94620237150023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c4aa7e44cc827%3A0x9a57a286c3e3fb43!2zWlXFoCBIZcWZbWFuxa92IE3Em3N0ZWM!5e0!3m2!1scs!2scz!4v1731352605152!5m2!1scs!2scz"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d730.4994267031461!2d15.942101021067296!3d50.19754281324537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470dd42ec5cdd771%3A0xbc6dac341314fdfa!2zUGl2b3ZhciBVIEh1xaFrxa8!5e0!3m2!1scs!2scz!4v1764687906289!5m2!1scs!2scz"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
