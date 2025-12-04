@@ -118,20 +118,26 @@ a {
 .Description {
   margin: 0 auto;
   width: 80%;
-  text-align: center;
+  text-align: left; /* desktop: zarovnat vlevo */
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust for the element's own width and height */
-  color: var(--bg); /* Change text color for better visibility */
-  /*background-color: rgba(30, 30, 30, 0.822); /* Optional: Add a background for better contrast */
-  padding: 10px; /* Optional: Add some padding */
+  color: var(--bg);
+  padding: 10px;
   border-radius: 5px;
   font-weight: bold;
 
   opacity: 0;
   animation: slideInDescription 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 0.3s;
+}
+
+/* dědí zarovnání z .Description */
+.Description h1,
+.Description p {
+  margin: 0;
+  text-align: inherit;
 }
 
 @keyframes slideInDescription {
@@ -162,7 +168,7 @@ a {
   position: relative; /* Přidáno pro relativní umístění */
   text-align: center; /* Zarovná text na střed */
   padding-bottom: 2%;
-  background: #e8e8e8;
+  background: var(--bg);
   border-radius:25px ;
   overflow: hidden; /* Zajistí, že obrázek nepřečnívá */
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -197,12 +203,15 @@ a {
 .obor-druh img {
   width: 100%;
   height: auto;
-  max-height: 120px;
-  /* Odstranit stín */
-  /* box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); */ /* Tuto řádku můžete zakomentovat nebo smazat */
+  max-height: 80px;           /* sjednotí výšku všech ikon */
+  max-width: 80px;            /* zabraní příliš širokým ikonám */
+  aspect-ratio: 1 / 1;        /* zajistí čtvercový formát */
+  object-fit: contain;        /* obsah se vejde do čtverce bez oříznutí */
   border-top-left-radius: 25px; 
   border-top-right-radius: 25px; 
-  transition: transform 0.3s ease; /* Přidá plynulý přechod pro transformaci */
+  transition: transform 0.3s ease;
+  margin: 0 auto;             /* vycentruje ikonu horizontálně */
+  display: block;             /* zajistí, že margin auto funguje */
 }
 .obor-druh:hover img {
   transform: scale(1.1); /* Zvětší obrázek o 10% při najetí myší */
@@ -227,6 +236,108 @@ font-size: 1em;
     
 }
 
+.sections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), 
+              opacity 700ms ease;
+}
+
+.section-card.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.section-card.reverse {
+  direction: rtl;
+}
+
+.section-card.reverse > * {
+  direction: ltr;
+}
+
+.section-content h2 {
+  font-size: 2.2em;
+  color: #7a5cff;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.section-content p {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #333;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.section-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.section-content li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+  font-size: 1.05em;
+}
+
+.section-content li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #7a5cff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.section-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.section-card:hover .image-placeholder img {
+  transform: scale(1.05);
+}
 
 
 @media (max-width: 768px) {
@@ -246,13 +357,19 @@ font-size: 1em;
     width: 100%;
   }
 
+.Description {
+    width: 90%;
+    text-align: center; /* mobil: vystředěno */
+    padding: 12px;
+  }
+
   .obor-druh {
     width: 100%;
     margin-bottom: 4%;
   }
 
   .oborImage {
-    box-shadow: none;
+    /*box-shadow: none;*/
     background-color: none;
   }
 

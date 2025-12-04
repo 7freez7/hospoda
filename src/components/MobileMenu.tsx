@@ -65,21 +65,6 @@ const MobileMenu = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/uvod/pracoviste" onClick={closeMenu}>
-                    Místa výuky
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/uvod/teachers" onClick={closeMenu}>
-                    Učitelé
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/uvod/absolventi" onClick={closeMenu}>
-                    Absolventi
-                  </Link>
-                </li>
-                <li>
                   <Link to="/uvod/soucasnost" onClick={closeMenu}>
                     Současnost
                   </Link>
