@@ -1,155 +1,98 @@
 .hamburger {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
+  position: fixed;
+  top: 2px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 2em;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, #222831 0%, #1a1f26 100%);
+  color: white;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+  padding-top: 80px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-list a {
+  display: block;
+  padding: 16px 24px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.menu-list a:hover {
+  background-color: rgba(206, 155, 2, 0.1);
+  color: var(--accent);
+  border-left-color: var(--accent);
+  padding-left: 28px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 769px) {
   .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background: #222831;
-    color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding-top: 60px;
-    z-index: 1000;
+    display: none;
   }
-  
-  .menu-list {
-    list-style: none;
-    padding: 0;
+
+  .hamburger {
+    display: none;
   }
-  
-  .menu-list li {
-    padding: 15px 20px;
-    border-bottom: 1px solid #393E46;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .menu-list a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menu-list button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    list-style: none;
-    padding: 0;
-    margin-top: 5px;
-    background: #393E46;
-  }
-  
-  .dropdown li {
-    padding: 10px 30px;
-  }
-  
-  .dropdown a {
-    color: #EEEEEE;
-  }
-  
+
   .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 900;
-  }
-
-  /* Dropdown styling */
-.dropdown {
     display: none;
-    list-style: none;
-    padding: 0;
-    background: #393E46;
   }
-  
-  .dropdown li {
-    padding: 10px 30px;
-  }
-  
-  .dropdown a {
-    color: #EEEEEE;
-  }
-  
-  /* Zobrazit dropdown při aktivním stavu */
-  .dropdown.show {
-    display: block;
-  }
-  
-
-  /* Styly pro tlačítko pro otevření dropdownu */
-.dropdown-toggle {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Dropdown styling */
-  .dropdown {
-    display: none;
-    list-style: none;
-    padding: 0;
-    background: #393E46;
-  }
-  
-  .dropdown li {
-    padding: 10px 30px;
-  }
-  
-  .dropdown a {
-    color: #EEEEEE;
-  }
-  
-  /* Zobrazit dropdown při aktivním stavu */
-  .dropdown-toggle + .dropdown {
-    display: block;
-  }
-  
-  
-  @media (max-width: 768px) {
-    /* Skryje klasické menu pro desktop */
-    .currentLink {
-      display: none;
-    }
-  
-    /* Zobrazení mobilního menu */
-    .mobile-menu {
-      display: block;
-    }
-  
-    /* Skryje hamburger tlačítko na mobilu (pokud je otevřené) */
-    .hamburger {
-      display: block;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    /* Skryje mobilní menu na desktopových verzích */
-    .mobile-menu {
-      display: none;
-    }
-  
-    /* Skryje hamburger tlačítko na desktopových verzích */
-    .hamburger {
-      display: none;
-    }
-  }
-  
+}

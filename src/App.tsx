@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 
 import Galerie from "./pages/Gallery";
 import Documents from "./pages/Documents";
-import About from "./pages/About";
 
 import NotFound from "./NotFound";
 import {
@@ -41,7 +40,6 @@ const App: React.FC = () => {
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/galerie" element={<Galerie />} />
               <Route path="/documents" element={<Documents />} />
-              <Route path="/uvod/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
 
             </Routes>

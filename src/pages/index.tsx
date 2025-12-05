@@ -1,16 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link pro navigaci
-import ZusHM from "../../public/assets/img/artt.jpg";
-
-import hudbaIco from "../../public/assets/icons/music.svg";
-import balletIco from "../../public/assets/icons/ballet.svg";
-import palleteIco from "../../public/assets/icons/artpallete.svg";
-
-import beerIco from "../../public/assets/icons/beer.svg";
-import beerIco2 from "../../public/assets/icons/beer-mug.svg";
-
-
-
 
 const Uvod = () => {
   useEffect(() => {
@@ -23,7 +12,7 @@ const Uvod = () => {
         if (entry.isIntersecting) {
           const idx = items.indexOf(el);
           const safeIdx = idx < 0 ? 0 : idx;
-          el.style.transitionDelay = `${Math.min(safeIdx, 12) * 80}ms`;
+          el.style.transitionDelay = `${Math.min(safeIdx, 12) * 50}ms`;
           el.classList.add("in-view");
         } else {
           // pokud chceš, aby se animace opakovala při scrollnutí zpět nahoru, odkomentuj:
@@ -99,6 +88,27 @@ const Uvod = () => {
       </div>
 
       <div className="sections-container">
+
+        <section className="section-card reverse">
+          <div className="section-image">
+            <div className="image-placeholder">
+              <img src={`${process.env.PUBLIC_URL}/assets/img/U-Husku-Hospoda.jpg`} alt="Pivovar" />
+            </div>
+          </div>
+          <div className="section-content">
+            <h2>Náš Pivovar</h2>
+            <p>
+              Naší specialitou je výroba tradičního piva. Chutě generace chování hostince se odráží v každém skleničce našeho pěnivého moku.
+            </p>
+            <p>
+              Používáme pouze ty nejkvalitnější suroviny a tradiční postupy vaření, aby mělo pivo ten pravý charakter.
+            </p>
+            <p>
+              Přijďte si jej vychutnat přímo u nás, nebo si objednejte přesně podle vašich představ.
+            </p>
+          </div>
+        </section>
+
         <section className="section-card">
           <div className="section-content">
             <h2>O Nás</h2>
@@ -120,7 +130,7 @@ const Uvod = () => {
         <section className="section-card reverse">
           <div className="section-image">
             <div className="image-placeholder">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/hospoda2.jpg`} alt="Komunikace" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/1105646.jpg`} alt="Komunikace" />
             </div>
           </div>
           <div className="section-content">
@@ -163,34 +173,11 @@ const Uvod = () => {
           </div>
           <div className="section-image">
             <div className="image-placeholder">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/hospoda3.jpg`} alt="Akce" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/1105644.jpg`} alt="Akce" />
             </div>
           </div>
-        </section>
-
-        <section className="section-card reverse">
-          <div className="section-image">
-            <div className="image-placeholder">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/pivovar.jpg`} alt="Pivovar" />
-            </div>
-          </div>
-          <div className="section-content">
-            <h2>Náš Pivovar</h2>
-            <p>
-              Naší specialitou je výroba tradičního piva. Chutě generace chování hostince se odráží v každém skleničce našeho pěnivého moku.
-            </p>
-            <p>
-              Používáme pouze ty nejkvalitnější suroviny a tradiční postupy vaření, aby mělo pivo ten pravý charakter.
-            </p>
-            <p>
-              Přijďte si jej vychutnat přímo u nás, nebo si objednejte přesně podle vašich představ.
-            </p>
-          </div>
-        </section>
-                
+        </section>      
       </div>
-
-      
     </div>
   );
 };

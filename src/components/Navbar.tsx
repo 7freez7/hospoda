@@ -36,7 +36,7 @@ const Navbar = () => {
       ) : (
         <div className="Logo">
           <Link to="/">
-            <img src={`${process.env.PUBLIC_URL}/assets/icons/home.svg`} alt="logo" />
+            <img src={`${process.env.PUBLIC_URL}/assets/icons/pub.svg`} alt="logo" />
           </Link>
         </div>
       )}
