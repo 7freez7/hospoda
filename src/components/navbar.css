@@ -18,11 +18,7 @@
     transform: translateY(-50%); /* Vycentrování vertikálně */
 }
 
-.Logo img {
-    height: 55px; /* Velikost obrázku */
-    padding: 0;
-    
-}
+.Logo img {height: 55px; padding: 0;}
 
 .currentLink {
     background-color: #393E46;
@@ -36,10 +32,7 @@
     width: 100%; /* Panel se přizpůsobí dostupné šířce */
 }
 
-.currentLink div {
-    position: relative; /* Pro správné umístění dropdownu */
-    margin: 0 10px; /* Odsazení mezi odkazy */
-}
+.currentLink div {position: relative; /* Pro správné umístění dropdownu */margin: 0 10px;}
 
 .currentLink a {
     margin: 0 15px;
@@ -50,14 +43,9 @@
     align-items: center; /* Vertikální vycentrování */
 }
 
-.currentLink a:hover {
-    transform: scale(1.2);
-    text-decoration: underline;
-}
+.currentLink a:hover {transform: scale(1.2);text-decoration: underline;}
 
-body {
-    padding-top: 6%;
-}
+body {padding-top: 6%;}
 
 /* Styl pro dropdown */
 .dropdown {
@@ -101,6 +89,14 @@ body {
 
 .currentLink > div:hover .dropdown {
     display: block;
+}
+
+@media (max-width: 768px) {
+    .Link {
+        padding: 40px 0; /* Zvýšený vertikální padding pro mobilní zařízení */
+    }
+    
+
 }
 
 
